@@ -12,10 +12,11 @@
         const ruffle = window.RufflePlayer.newest();
         const player = ruffle.createPlayer();
         const container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("Run3.swf");
         player.style.width = "800px"; 
         player.style.height="1200px";
+        container.appendChild(player);
+        player.load("Run3.swf");
+
     });
 </script>
 <script src="ruffle.js"></script>
