@@ -7,17 +7,16 @@
                 position: relative;
                 width: fit-content;
                 left: 50%;
-                transform: translateX(-50%);
-                up: 50%;
-                transform: translateY(-50%);
-            
+                transform: translateX(-50%);        
         }
     </style>
 </head>
 
 <body>
+    <button onclick="run('Run3.swf');">test</button>
 <div id="container"></div>
 <script>
+    function run(game){
     window.RufflePlayer = window.RufflePlayer || {};
     window.addEventListener("load", (event) => {
         const ruffle = window.RufflePlayer.newest();
@@ -26,8 +25,8 @@
         player.style.width = "600px"; 
         player.style.height="400px";
         container.appendChild(player);
-        player.load("Run3.swf");
-
+        player.load(game);
+    }
     });
 </script>
 <script src="ruffle.js"></script>
