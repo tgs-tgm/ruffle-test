@@ -19,14 +19,15 @@
     
 <div id="container"></div>
 <script>
-   function runGameTest(game){
-     window.RufflePlayer = window.RufflePlayer || {};
-     const ruffle = window.RufflePlayer.newest();
-     const player = ruffle.createPlayer();
-     const container = document.getElementById("container")
-     player.style.width = "600px"; 
-     player.style.height="400px";
-     container.appendChild(player);
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+    });
+   function runGameTest(game){   
      player.load(game);
     }
     </script>
