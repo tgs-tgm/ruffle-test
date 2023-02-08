@@ -9,6 +9,9 @@
                 left: 50%;
                 transform: translateX(-50%);        
         }
+        #buttons{
+            position: fixed;
+        }
     </style>
 </head>
 
@@ -16,8 +19,7 @@
     
 <div id="container"></div>
 <script>
-   function runGameTest(game, color){
-     document.body.style.background = color
+   function runGameTest(game){
      window.RufflePlayer = window.RufflePlayer || {};
      const ruffle = window.RufflePlayer.newest();
      const player = ruffle.createPlayer();
@@ -27,8 +29,8 @@
      container.appendChild(player);
      player.load(game);
     }
-</script>
-<button onclick="runGameTest('Run3.swf', 'red')">test</button>
+    </script>
+<button id="buttons" onclick="runGameTest('Run3.swf')">Run 3</button>
 <script src="ruffle.js"></script>
 
 </body>
