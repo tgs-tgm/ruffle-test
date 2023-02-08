@@ -13,23 +13,24 @@
 </head>
 
 <body>
-    <button onclick="run('Run3.swf');">test</button>
+    
 <div id="container"></div>
 <script>
-    function run(game){
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
-        player.style.width = "600px"; 
-        player.style.height="400px";
-        container.appendChild(player);
-        player.load(game);
+    function runGameTest(game){
+     window.RufflePlayer = window.RufflePlayer || {};
+       window.addEventListener("load", (event) => {
+          const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            player.style.width = "600px"; 
+            player.style.height="400px";
+            container.appendChild(player);
+            player.load(game);
     }
     });
 </script>
 <script src="ruffle.js"></script>
+<button onclick="runGameTest('Run3.swf')">test</button>
 </body>
 
 </html>
