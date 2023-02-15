@@ -21,11 +21,9 @@
 <script>
     
     let running = false;
-    });
+    window.RufflePlayer = window.RufflePlayer || {};
     function runGameTest(){
-        player.load('Run3.swf');
         if running =false{
-            window.RufflePlayer = window.RufflePlayer || {};
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
             const container = document.getElementById("container");
