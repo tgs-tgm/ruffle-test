@@ -19,15 +19,25 @@
     
 <div id="container"></div>
 <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    var ruffle = window.RufflePlayer.newest();
-    var player = ruffle.createPlayer();
-    var container = document.getElementById("container");
-    container.appendChild(player);
-        
+    
+    let running = false;
     });
     function runGameTest(){
         player.load('Run3.swf');
+        if running =false{
+            window.RufflePlayer = window.RufflePlayer || {};
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+            player.load('Run3.swf');
+            running = true;
+        }else{
+            container.removeChild(player);
+           
+            
+        }
+           
     }
     </script>
 <button id="buttons" onclick="runGameTest()">Run 3</button>
