@@ -20,12 +20,10 @@
 <div id="container"></div>
 <script>
     window.RufflePlayer = window.RufflePlayer || {};
-
-    window.addEventListener("DOMContentLoaded", () => {
-        var ruffle = window.RufflePlayer.newest();
-        var player = ruffle.createPlayer();
-        var container = document.getElementById("container");
-        container.appendChild(player);
+    var ruffle = window.RufflePlayer.newest();
+    var player = ruffle.createPlayer();
+    var container = document.getElementById("container");
+    container.appendChild(player);
         
     });
     function runGameTest(){
